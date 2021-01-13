@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>
+	Judging Scoring Sheet
+</title>
+<style>
+  @font-face { font-family: Ilisarniq-Bold; src: url('Ilisarniq-Bold.otf'); } 
+  header{
+    background-color: #eca1a6;
+  }
+  form{
+    background-color: #d6cbd3;
+  }
+  input, h1, b, em{
+    color: #3e4444;
+    margin-left: 3%;
+    font-size: small;
+    font-family: Ilisarniq-Bold;
+  }
+  button{
+    margin-left: 3%;
+  }
+  em{
+    text-align: justify-all;
+    font-size: x-small;
+    font-family: Palatino;
+  }
+  h1{
+    font-size: x-large;
+    color: white;
+  }
+  p{
+    color: #3e4444;
+    margin-left: 3%;
+    font-size: small;
+    font-family: Ilisarniq-Bold;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <br><br>
+	<h1>APPE Intercollegiate Ethics Bowl Championship Judge’s Score Sheet</h1>
+  <br>
+<br>
+</header>
+	<form
+  action="****************"
+  method="****"
+  >
+    <br>
+  <label for="Judge"><b>Judge</b></label><br>
+  <input type="text" id="Judge" name="Judge"><br><br>
+  <label for="Round"><b>Round</b></label><br>
+  <input type="number" id="Round" name="Round"><br><br>
+  <label for="Room"><b>Room</b></label><br>
+  <input type="text" id="Room" name="Room"><br><br>
+  <label for="Team One"><b>Team One</b></label><br>
+  <input type="text" id="Team One" name="Team One"><br><br>
+  <label for="Team Two"><b>Team Two</b></label><br>
+  <input type="text" id="Team Two" name="Team Two"><br><br>
+  <b> 1. Team One Presentation (3-30)</b><br><br>
+  <label for="Team One Presentation A:"><em>A: Was Team One's presentation clear and systematic? (1-10)</em></label><br>
+   <input type="number" id="Team One Presentation A:" name="Team One Presentation A:" min="1" max="10"><br>
+   <label for="Team One Presentation B:"><em>B: Did the team's presentation clearly identify and thoroughly discuss the central moral dimensions of the case? (1-10)</em></label><br>
+   <input type="number" id="Team One Presentation B:" name="Team One Presentation B:" min="1" max="10"><br>
+   <label for="Team One Presentation C:"><em>C: Did the team's presentation indicate both awareness and thoughtful consideration of different viewpoints, including especially those that would loom large in the reasoning of individuals who disagree with the team's position? (1-10)</em></label><br>
+   <input type="number" id="Team One Presentation C:" name="Team One Presentation C:" min="1" max="10"><br>
+   <br>
+   <label for="2. Team Two Commentary(1-10)"><b>2. Team Two Commentary(1-10)</b></label><br>
+   <input type="number" id="2. Team Two Commentary(1-10)" name="2. Team Two Commentary(1-10)" min="1" max="10"><br><br>
+    <label for="3. Team One Response to Commentary(1-10)"><b>3. Team One Response to Commentary(1-10)</b></label><br>
+   <input type="number" id="3. Team One Response to Commentary(1-10)" name="3. Team One Response to Commentary(1-10)" min="1" max="10"><br><br>
+    <label for="4. Team One Response to Judges(1-10)"><b>4. Team One Response to Judges(1-10)</b></label><br>
+   <input type="number" id="4. Team One Response to Judges(1-10)" name="4. Team One Response to Judges(1-10)" min="1" max="10"><br><br>
+   <b> 5. Team Two Presentation (3-30)</b> <br><br>
+  <label for="Team Two Presentation A:"><em>A: Was Team Two's presentation clear and systematic? (1-10)</em></label><br>
+   <input type="number" id="Team Two Presentation A:" name="Team Two Presentation A:" min="1" max="10"><br>
+   <label for="Team Two Presentation B:"><em>B: Did the team's presentation clearly identify and thoroughly discuss the central moral dimensions of the case? (1-10)</em></label><br>
+   <input type="number" id="Team Two Presentation B:" name="Team Two Presentation B:" min="1" max="10"><br>
+   <label for="Team Two Presentation C:"><em>C: Did the team's presentation indicate both awareness and thoughtful consideration of different viewpoints, including especially those that would loom large in the reasoning of individuals who disagree with the team's position? (1-10)</em></label><br>
+   <input type="number" id="Team Two Presentation C:" name="Team Two Presentation C:" min="1" max="10"><br>
+   <br>
+   <label for="6. Team One Commentary(1-10)"><b>6. Team One Commentary(1-10)</b></label><br>
+   <input type="number" id="6. Team One Commentary(1-10)" name="6. Team One Commentary(1-10)" min="1" max="10"><br><br>
+    <label for="7. Team Two Response to Commentary(1-10)"><b>7. Team Two Response to Commentary(1-10)</b></label><br>
+   <input type="number" id="7. Team Two Response to Commentary(1-10)" name="7. Team Two Response to Commentary(1-10)" min="1" max="10"><br><br>
+    <label for="8. Team Two Response to Judges(1-10)"><b>8. Team Two Response to Judges(1-10)</b></label><br>
+   <input type="number" id="8. Team Two Response to Judges(1-10)" name="8. Team Two Response to Judges(1-10)" min="1" max="10"><br>
+   <p>Total Team One (Total Points: 60)</p>
+   <button type="button" onclick="calculateOneFinal()">Click here to display and submit Team One's Final Score!</button>
+   <br>
+   <br>
+   <input type="number" id="Total Score of Team One" name="Total Score of Team One" min="12" max="60"><br>
+   <p>Total Team Two Score (Total Points: 60)</p>
+   <button type="button" onclick="calculateTwoFinal()">Click here to display and submit Team Two's Final Score!</button>
+   <br>
+   <br>
+  <input type="number" id="Total Score of Team Two" name="Total Score of Team Two" min="12" max="60"><br>
+  <p>Winner</p>
+   <button type="button" onclick="winner()">Click here to display and submit the winning team!</button>
+   <br>
+   <br>
+  <input type="text" id="Winning Team" name="Winning Team" min="12" max="60"><br>
+   <br>
+   <script>
+    function calculateOneFinal()
+    {
+      var field1 = document.getElementById("Team One Presentation A:").value;
+      var field2 = document.getElementById("Team One Presentation B:").value;
+      var field3 = document.getElementById("Team One Presentation C:").value;
+      var field4 = document.getElementById("3. Team One Response to Commentary(1-10)").value;
+      var field5 = document.getElementById("4. Team One Response to Judges(1-10)").value;
+      var field6 = document.getElementById("6. Team One Commentary(1-10)").value;
+      var result = Number(field1) + Number(field2) + Number(field3) + Number(field4) + Number(field5) + Number(field6);
+      document.getElementById("Total Score of Team One").value = result;
+    }
+    function calculateTwoFinal()
+    {
+      var field1 = document.getElementById("Team Two Presentation A:").value;
+      var field2 = document.getElementById("Team Two Presentation B:").value;
+      var field3 = document.getElementById("Team Two Presentation C:").value;
+      var field4 = document.getElementById("2. Team Two Commentary(1-10)").value;
+      var field5 = document.getElementById("7. Team Two Response to Commentary(1-10)").value;
+      var field6 = document.getElementById("8. Team Two Response to Judges(1-10)").value;
+      var result = Number(field1) + Number(field2) + Number(field3) + Number(field4) + Number(field5) + Number(field6);
+      document.getElementById("Total Score of Team Two").value = result;
+    }
+    function winner()
+    {
+    	if ((document.getElementById("Total Score of Team One").value) > (document.getElementById("Total Score of Team Two").value))
+    	{
+    		var answer = "Team One";
+    		document.getElementById("Winning Team").value = answer;
+    	}
+    	else if ((document.getElementById("Total Score of Team One").value) < (document.getElementById("Total Score of Team Two").value))
+    	{
+    		var answer = "Team Two";
+    		document.getElementById("Winning Team").value = answer;
+    	}
+    	else
+    	{
+    		var answer = "Tie";
+    		document.getElementById("Winning Team").value = answer;
+    	}
+    }
+   </script>
+<button type="submit">Submit the entire Form!</button>
+<br>
+<br>
+<br>
+</form>
+</body>
+</html>
